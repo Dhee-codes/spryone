@@ -1,13 +1,14 @@
 import Link from "next/link";
 
 type MenuProps = {
+  menuOpen: boolean;
   closeMenu: () => void;
 };
 
 
-export const Menu = ({ closeMenu }: MenuProps) => {
+export const Menu = ({ closeMenu, menuOpen }: MenuProps) => {
   return (
-    <section className="absolute inset-0 z-50">
+    <section className={`fixed inset-0 z-50 transition-all duration-600 ease-in-out ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}`}>
       <button
         className="absolute top-layout-y right-layout-x z-50"
         onClick={closeMenu}

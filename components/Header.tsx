@@ -23,7 +23,6 @@ export const Header = () => {
         </div>
 
         <button
-          className=""
           onClick={() => setMenuOpen(true)}
           >
           <svg
@@ -38,11 +37,10 @@ export const Header = () => {
         </button>
       </header>
 
-      {menuOpen && (
-        <Menu
-          closeMenu={() => setMenuOpen(false)}
-        />
-      )}
+      <Menu
+        menuOpen={menuOpen}
+        closeMenu={() => setMenuOpen(false)}
+      />
     </>
   );
 };

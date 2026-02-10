@@ -11,15 +11,17 @@ export const Menu = ({ closeMenu, menuOpen }: MenuProps) => {
     <section
       inert={menuOpen ? undefined : true}
       id="main-menu"
-      aria-hidden={!menuOpen}
       className={`fixed inset-0 z-50 transition-all duration-600 ease-in-out
                 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}`}
       >
       <button
+        aria-controls="main-menu"
         className="absolute top-layout-y right-layout-x z-50"
         onClick={closeMenu}
         >
+        <span className="sr-only">Close menu</span>
         <svg
+          aria-hidden="true"
           className="w-8.5 h-8.5 stroke-background md:stroke-brand"
           viewBox="0 0 34 34"
           fill="none"
@@ -40,7 +42,7 @@ export const Menu = ({ closeMenu, menuOpen }: MenuProps) => {
                   <Link href="/services">Services</Link>
                 </li>
                 <li>
-                  <Link href="/proojects">Projecs</Link>
+                  <Link href="/proojects">Projects</Link>
                 </li>
                 <li>
                   <Link href="/about">About Us</Link>
@@ -53,13 +55,13 @@ export const Menu = ({ closeMenu, menuOpen }: MenuProps) => {
 
           <ul className="absolute bottom-layout-y flex gap-sz-28 text-sz-20 leading-nm tracking-wide">
             <li>
-              <Link href="">LinkedIn</Link>
+              <a href="" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </li>
             <li>
-              <Link href="">Instagram</Link>
+              <a href="" target="_blank" rel="noopener noreferrer">Instagram</a>
             </li>
             <li>
-              <Link href="">X (formerly Twitter)</Link>
+              <a href="" target="_blank" rel="noopener noreferrer">X (formerly Twitter)</a>
             </li>
           </ul>
         </section>

@@ -7,9 +7,9 @@ export const Hero = () => {
         </h1>
         <div className="lg:flex lg:flex-col">
           <div className="max-w-97.5 mx-auto my-7.5 lg:mb-2 lg:scale-85 lg:self-end lg:origin-top-right">
-            <div aria-hidden="true" className="w-full lg:w-97.5 aspect-5/1 bg-[url('/hero/hero-decor.png')] bg-cover bg-center rounded-full mb-5">
-              <div className=""> {/* Here */}
-                <div className=""></div>
+            <div aria-hidden="true" className="relative w-full lg:w-97.5 aspect-5/1 bg-[url('/hero/hero-decor.png')] bg-cover bg-center rounded-full mb-5">
+              <div className="absolute top-1 bottom-1 left-1 aspect-square rounded-full bg-background">
+                <div className="absolute top-6 bottom-6 left-6 aspect-square bg-[url('/hero/play.svg')] bg-cover bg-center"></div>
               </div>
             </div>
             <div className="w-2/3 mx-auto flex justify-between opacity-30">

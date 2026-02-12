@@ -28,7 +28,7 @@ export const Footer = () => {
       <div className="text-sz-16 md:text-sz-20 mb-2 md:mb-0 md:col-start-1 md:row-start-2">
         <Link href="">Terms & Conditions</Link>
       </div>
-      <div className="text-sz-16 md:text-sz-20 md:col-start-4">
+      <div className="text-sz-16 md:text-sz-20 md:col-start-4 md:row-start-2">
         <Link href="">Privacy Policy</Link>
       </div>
     </footer>

@@ -23,7 +23,7 @@ export const Stats = () => {
       {stats.map((stat, index) => (
         <div
           key={index}
-          className="relative flex flex-col items-start md:items-center text-left md:text-center pl-6"
+          className="relative flex flex-col items-start md:items-center text-left md:text-center pl-6 group"
         >
           {index !== 0 && (
             <span className="absolute left-0 top-1/4 h-1/2 w-0.5 bg-transparent md:bg-feint"></span>

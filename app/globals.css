@@ -5,6 +5,7 @@
   --foreground: oklch(0% 0 0);
   --brand: oklch(93.845% 0.2084 121.668);
   --feint: oklch(82.032% 0.00009 271.152 / 0.3);
+  --card: oklch(18.791% 0.00162 16.574);
 }
 
 @theme inline {
@@ -12,13 +13,17 @@
   --color-foreground: var(--foreground);
   --color-brand: var(--brand);
   --color-feint: var(--feint);
+  --color-card: var(--card);
 
   --font-grotesk: var(--font-host-grotesk);
   --font-nuni: var(--font-nunito);
 
   --text-sz-150: clamp(3.75rem, calc(2.14rem + 8vw), 9.375rem);
   --text-sz-64: clamp(2rem, calc(1.42rem + 2.86vw), 4rem);
+  --text-sz-55: clamp(2rem, calc(1.5rem + 2vw), 3.4375rem);
   --text-sz-48: clamp(1.875rem, calc(1.55rem + 1.6vw), 3rem);
+  --text-sz-40: clamp(1.75rem, calc(1.53rem + 1vw), 2.5rem);
+  --text-sz-32: clamp(1.5rem, calc(1.357rem + 0.71vw), 2rem);
   --text-sz-24: clamp(1rem, calc(0.857rem + 0.71vw), 1.5rem);
   --text-sz-20: clamp(0.875rem, calc(0.76rem + 0.53vw), 1.25rem);
   --text-sz-18: clamp(0.625rem, calc(0.482rem + 0.71vw), 1.125rem);

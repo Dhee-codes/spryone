@@ -1,4 +1,4 @@
-const Button = ({ 
+export const Button = ({ 
   children, 
   className = "", 
   ...props 
@@ -10,5 +10,3 @@ const Button = ({
     {children}
   </button>
 );
-
-export { Button };

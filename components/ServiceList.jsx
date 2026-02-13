@@ -1,3 +1,5 @@
+import { ArrowIcon } from "./ui/ArrowIcon";
+
 const services = [
   {
     id: "01",
@@ -31,16 +33,17 @@ export const ServiceList = () => {
         {services.map((item) => (
           <div
             key={item.id}
-            className="group flex flex-col md:flex-row items-start md:items-center text-feint py-10 border-b border-feint cursor-pointer"
+            className="group flex flex-col md:flex-row items-start md:items-center text-foreground/40 py-10 border-b border-feint cursor-pointer"
           >
             <span className="md:w-1/8 text-sz-40 group-hover:text-foreground">
               {item.id}
             </span>
 
-            <div className="flex-1">
-              <h2 className="text-sz-64 group-hover:text-foreground">
+            <div className="flex-1 flex gap-4 md:gap-6">
+              <h2 className="text-sz-48 md:text-sz-64 group-hover:text-foreground">
                 {item.title}
               </h2>
+              <ArrowIcon className="w-6 md:w-11 text-foreground hidden group-hover:block" />
             </div>
 
             <div className="md:w-1/3 mt-4 md:mt-0">

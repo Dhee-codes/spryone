@@ -1,3 +1,5 @@
+import { ArrowIcon } from "./ui/ArrowIcon"
+
 export type Service = {
   id: string
   title: string
@@ -22,7 +24,7 @@ export function ServicesGrid({ services }: ServicesGridProps) {
             </span>
 
             <div className="space-y-4">
-              <h2 className="text-sz-55 leading-none tracking-wide">
+              <h2 className="text-sz-55 leading-none tracking-wide max-w-[10ch]">
                 {service.title}
               </h2>
               
@@ -34,6 +36,7 @@ export function ServicesGrid({ services }: ServicesGridProps) {
                 {service.detail}
               </p>
             </div>
+            <ArrowIcon className="absolute top-1/2 translateY-[-50%] right-4 md:right-6 w-6 md:w-11" />
           </div>
         ))}
     </section>

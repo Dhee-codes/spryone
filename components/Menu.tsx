@@ -37,19 +37,19 @@ export const Menu = ({ closeMenu, menuOpen }: MenuProps) => {
           <nav className="mt-menu-y">
             <ul className="text-sz-48 md:text-sz-64 font-medium leading-none tracking-wide space-y-5">
                 <li>
-                  <Link href="/">Home</Link>
+                  <Link href="/" onClick={closeMenu}>Home</Link>
                 </li>
                 <li>
-                  <Link href="/services">Services</Link>
+                  <Link href="/services" onClick={closeMenu}>Services</Link>
                 </li>
                 <li>
-                  <Link href="/proojects">Projects</Link>
+                  <Link href="/proojects" onClick={closeMenu}>Projects</Link>
                 </li>
                 <li>
-                  <Link href="/about">About Us</Link>
+                  <Link href="/about" onClick={closeMenu}>About Us</Link>
                 </li>
                 <li>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/contact" onClick={closeMenu}>Contact</Link>
                 </li>
             </ul>
           </nav>

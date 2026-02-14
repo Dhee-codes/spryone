@@ -43,7 +43,7 @@ export const Menu = ({ closeMenu, menuOpen }: MenuProps) => {
                   <Link href="/services" onClick={closeMenu}>Services</Link>
                 </li>
                 <li>
-                  <Link href="/proojects" onClick={closeMenu}>Projects</Link>
+                  <Link href="/projects" onClick={closeMenu}>Projects</Link>
                 </li>
                 <li>
                   <Link href="/about" onClick={closeMenu}>About Us</Link>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Logos } from "@/components/Logos";
 
 const stats = [
     {
@@ -13,87 +14,42 @@ const stats = [
     },
     {
         id: "03",
-        metric: "100%",
+        metric: "100%", 
         impact: "Client Retention Rate",
-    },
-]
-
-const logos = [
-    {
-        company: "Layers",
-        src: "/about/layers.svg",
-        width: 146,
-        height: 48,
-    },
-    {
-        company: "Sisyphus",
-        src: "/about/sisyphus.svg",
-        width: 169,
-        height: 48,
-    },
-    {
-        company: "Circooles",
-        src: "/about/circooles.svg",
-        width: 183,
-        height: 48,
-    },
-    {
-        company: "Catalog",
-        src: "/about/catalog.svg",
-        width: 180,
-        height: 48,
-    },
-    {
-        company: "Quotient",
-        src: "/about/quotient.svg",
-        width: 187,
-        height: 48,
     },
 ]
 
 export default function About() {
   return (
-    <section>
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="overflow-hidden max-w-145 max-sm:h-[45vh]">
+    <section className="font-grotesk">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-15.5 mb-9 md:mb-18">
+        <div className="relative overflow-hidden h:autto max-sm:h-[35vh]">
           <Image
-            className="object-center"
+            className="object-cover max-sm:object-center"
             src="/about/decor-img.jpg"
             alt="Decorative image"
-            width={580}
-            height={560}
+            fill
           />
         </div>
-        <div>
-          <p className="text-sz-16 leading-6 font-semibold text-brand font-nuni mt-8">We&apos;ve helped hundreds of companies</p>
-          <p className="text-sz-48 tracking-tight md:leading-15 font-grotesk max-w-[20ch] mb-16">We&apos;re only just getting started on our journey</p>
+        <div className="md:p-4 lg:p-8.5">
+          <p className="text-sz-16 leading-6 font-semibold text-brand font-nuni">We&apos;ve helped hundreds of companies</p>
+          <p className="text-sz-48 tracking-tight md:leading-15 max-w-[20ch] mb-8 md:mb-16">We&apos;re only just getting started on our journey</p>
 
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 gap-6 md:gap-12">
             {stats.map((stat) => (
                 <div key={stat.id}>
-                    <p className="text-[72px]">{stat.metric}</p>
-                    <p>{stat.impact}</p>
+                    <p className="text-sz-60 text-brand ">{stat.metric}</p>
+                    <p className="font-nuni max-sm:max-w-[15ch]">{stat.impact}</p>
                 </div>
             ))}
           </div>
         </div>
-
-        <div>
-            <p>
-               From startups to the world&apos;s largest companies 
-            </p>
-            <div>
-                {logos.map((logo) => (
-                    <Image
-                        key={logo.company}
-                        src={logo.src}
-                        alt={logo.company}
-                        width={logo.width}
-                        height={logo.height}
-                    />
-                ))}
-            </div>
-        </div>
+      </div>
+      <div>
+          <p className="text-sz-16 leading-6 font-semibold text-brand font-nuni text-center mb-4 md:mb-8">
+              From startups to the world&apos;s largest companies 
+          </p>
+          <Logos />
       </div>
     </section>
   );

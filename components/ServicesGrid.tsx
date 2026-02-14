@@ -19,7 +19,7 @@ export function ServicesGrid({ services }: ServicesGridProps) {
           <Link 
             key={service.id}
             href=""
-            className="w-64 sm:w-76 lg:w-92 aspect-9/10 bg-card p-5 rounded-[20px] border border-feint drop-shadow hover:inset-ring-2 hover:ring-feint group cursor-pointer flex flex-col justify-end"
+            className="relative w-64 sm:w-76 lg:w-92 aspect-9/10 bg-card p-5 rounded-[20px] border border-feint drop-shadow hover:inset-ring-2 hover:ring-feint group cursor-pointer flex flex-col justify-end"
           >
             <span className="absolute top-5 left-5 text-feint text-sz-32 leading-none tracking-wide">
               {service.id}

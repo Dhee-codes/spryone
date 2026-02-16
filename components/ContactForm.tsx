@@ -82,54 +82,53 @@ export const ContactForm = () => {
           </div>
         </div>
 
-        {/* Right Side: Form */}
-        <div className="p-8 md:p-12 bg-[#1a1a1a]">
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
+        <div className="p-8 md:p-15 bg-card">
+          <form className="grid grid-cols-1 md:grid-cols-2 gap-9.75 text-xs text-white">
             <div className="flex flex-col gap-2">
-              <label className="text-xs text-gray-400">Name</label>
-              <input type="text" className="bg-transparent border-b border-gray-700 py-2 focus:border-white outline-none transition" />
+              <label htmlFor="name">Name</label>
+              <input type="text" /*id="name" name="name" value={name} onChange={}*/ className="bg-transparent border-b border-white py-2 outline-none" />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-xs text-gray-400">Email</label>
-              <input type="email" placeholder="abc@" className="bg-transparent border-b border-gray-700 py-2 focus:border-white outline-none transition" />
+              <label htmlFor="email">Email</label>
+              <input type="email"/*id="email" name="email" value={email} onChange={}*/ placeholder="abc@" className="bg-transparent border-b border-white py-2 outline-none" />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-xs text-gray-400">Phone Number</label>
-              <input type="text" placeholder="+234 812 345 6789" className="bg-transparent border-b border-gray-700 py-2 focus:border-white outline-none transition" />
+              <label htmlFor="phone">Phone Number</label>
+              <input type="text" /*id="phone" name="phone" value={phone} onChange={}*/ placeholder="+234 812 345 6789" className="bg-transparent border-b border-white py-2 outline-none" />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-xs text-gray-400">Product Question</label>
-              <select className="bg-transparent border-b border-gray-700 py-2 focus:border-white outline-none appearance-none cursor-pointer">
-                <option value="">Select option</option>
+              <label htmlFor="product_question">Product Question</label>
+              <select /*id="product_question" name="product_question" value={product_question} onChange={}*/ className="bg-transparent border-b border-white py-2 outline-none cursor-pointer">
+                <option value=""></option>
               </select>
             </div>
             <div className="flex flex-col gap-2 md:col-span-2">
-              <label className="text-xs text-gray-400">Message</label>
-              <textarea placeholder="Write your message.." className="bg-transparent border-b border-gray-700 py-2 focus:border-white outline-none transition resize-none" rows={1} />
+              <label htmlFor="message">Message</label>
+              <textarea /*id="message" name="message" value={message} onChange={}*/ placeholder="Write your message.." className="bg-transparent border-b border-white py-2 outline-none resize-none" rows={1} />
             </div>
 
-            {/* Newsletter Toggle */}
             <div className="md:col-span-2 flex items-center gap-3 mt-4">
-              <div className="w-5 h-5 rounded-full bg-lime-400 flex items-center justify-center">
-                <div className="w-2 h-2 bg-black rounded-full" />
-              </div>
-              <span className="text-sm text-gray-400 italic">subscribe to receive the latest news and exclusive offers</span>
+              <input type="checkbox" className="" />
+              <label className="text-foreground/60 font-nuni">subscribe to receive the latest news and exclusive offers</label>
             </div>
 
-            {/* reCAPTCHA Placeholder */}
-            <div className="md:col-span-2 bg-white rounded-md p-4 flex items-center justify-between text-black max-w-sm mt-4">
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 border-2 border-gray-300 rounded" />
-                <span className="text-sm">I&apos;m not a robot</span>
+            <div className="w-fit bg-white rounded-md px-2 py-1.5 lg:px-4 lg:py-2 flex items-center justify-between gap-6 md:gap-10 lg:gap-14 text-black">
+              <div className="flex items-center gap-2 lg:gap-4">
+                <input type="checkbox" />
+                <label className="text-[14px] leading-normal ">I&apos;m not a robot</label>
               </div>
-              <div className="flex flex-col items-center">
-                <img src="/captcha-logo.png" alt="" className="w-8" />
-                <span className="text-[10px] text-gray-500">Privacy - Terms</span>
+              <div>
+                <Image
+                  src="/contact/captcha.svg"
+                  alt="Captcha icon"
+                  width={67}
+                  height={61}
+                  className="w-10 md:w-13 lg:w-16.75"
+                />
               </div>
             </div>
 
-            {/* Submit Button */}
-            <div className="md:col-span-2 flex justify-end mt-8">
+            <div className="mt-8">
               <button type="submit" className="bg-black border border-gray-700 px-10 py-4 rounded-full font-semibold hover:bg-gray-900 transition shadow-lg active:scale-95">
                 Send Message
               </button>

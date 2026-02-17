@@ -17,7 +17,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://spryone-green.vercel.app/"),
+  metadataBase: new URL("https://spryone.vercel.app/"),
   title: {
     default: "SpryOne | 35+ Years of Mastery & Modern Creativity",
     template: "%s | SpryOne",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SpryOne | Culture-Shifting Campaigns & Digital Experiences",
     description: "35+ years of mastery. 400+ brands transformed. Discover the visionaries and builders behind the magic.",
-    url: "https://spryone-green.vercel.app/",
+    url: "https://spryone.vercel.app/",
     siteName: "SpryOne",
     images: [
       {

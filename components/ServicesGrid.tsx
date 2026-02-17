@@ -27,7 +27,7 @@ const services = [
 
 export function ServicesGrid() {
   return (
-    <section className="grid grid-cols-1 place-items-center lg:grid-cols-3 gap-7.5 font-grotesk mb-16 md:mb-24 lg:mb-45">
+    <section className="grid grid-cols-1 place-items-center lg:grid-cols-3 gap-7.5 font-grotesk">
         {services.map((service) => (
           <Link 
             key={service.id}

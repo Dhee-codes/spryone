@@ -108,21 +108,21 @@ export const ContactForm = () => {
             </div>
 
             <div className="md:col-span-2">
-              <label className="flex items-center gap-3 mt-4">
-                <input type="checkbox" className="sr-only peer" />
-                <span className="w-4 h-4 border rounded-full flex items-center justify-center peer-checked:bg-brand peer-checked:border-brand">
-                  <svg className="hidden w-3 h-3 text-black peer-checked:block" stroke="currentColor" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0C12.6522 0 15.1957 1.05357 17.0711 2.92893C18.9464 4.8043 20 7.34784 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20C7.34784 20 4.8043 18.9464 2.92893 17.0711C1.05357 15.1957 0 12.6522 0 10H0ZM9.42933 14.28L15.1867 7.08267L14.1467 6.25067L9.23733 12.3853L5.76 9.488L4.90667 10.512L9.42933 14.2813V14.28Z" fill="black"/>
+              <label className="flex items-center gap-3">
+                <span className="w-4 aspect-square border border-brand rounded-full flex items-center justify-center">
+                  <input type="checkbox" className="sr-only peer" />
+                  <svg className="opacity-0 peer-checked:opacity-100" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0C12.6522 0 15.1957 1.05357 17.0711 2.92893C18.9464 4.8043 20 7.34784 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20C7.34784 20 4.8043 18.9464 2.92893 17.0711C1.05357 15.1957 0 12.6522 0 10H0ZM9.42933 14.28L15.1867 7.08267L14.1467 6.25067L9.23733 12.3853L5.76 9.488L4.90667 10.512L9.42933 14.2813V14.28Z" fill="#D5FF3F"/>
                   </svg>
                 </span>
                 <span className="text-foreground/60 font-nuni select-none">subscribe to receive the latest news and exclusive offers</span>
               </label>
             </div>
 
-            <div className="w-fit bg-white rounded-md px-4 py-2 flex items-center justify-between gap-6 md:gap-10 lg:gap-14 text-black">
+            <div className="w-fit bg-white rounded-md px-4 py-2 flex items-center justify-between gap-4 md:gap-10 lg:gap-14 text-black">
               <div className="flex items-center gap-4">
                 <input type="checkbox" className="scale-150" />
-                <label className="text-[14px] leading-normal ">I&apos;m not a robot</label>
+                <label className="text-sz-1e leading-normal ">I&apos;m not a robot</label>
               </div>
               <div>
                 <Image

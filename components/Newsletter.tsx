@@ -16,7 +16,7 @@ export const Newsletter = () => {
               placeholder="Enter your email" 
               className="bg-[#ddd5dd] rounded-full text-background text-sz-16 leading-2 md:leading-6 px-4 py-3 outline-none"
             />
-            <button className="bg-brand text-background rounded-full text-sz-16 leading-2 md:leading-6 font-semibold px-4 py-3 hover:opacity-90">
+            <button className="bg-brand text-background rounded-full text-sz-16 leading-2 md:leading-6 font-semibold px-4 py-4">
               Subscribe
             </button>
           </form>

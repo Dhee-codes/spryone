@@ -4,24 +4,29 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "Green House Gardening",
+    title: "Green House Gardening Landing Page",
     src: "/home/secondary/project1.png",
+    href: "",
   },
   {
-    title: "Future Construction",
+    title: "Future Construction Landing Page",
     src: "/home/secondary/project2.png",
+    href: "",
   },
   {
-    title: "Global.io",
+    title: "Logistics Dashboard",
     src: "/home/secondary/project3.png",
+    href: "",
   },
   {
-    title: "Modern Dashboard",
+    title: "Spotify Spatial Design",
     src: "/home/secondary/project4.png",
+    href: "",
   },
   {
-    title: "Lifestyle",
+    title: "Lifestyle Landing Page",
     src: "/home/secondary/project5.png",
+    href: "",
   },
 ];
 
@@ -31,8 +36,8 @@ export const ProjectGrid = () => {
       {projects.map((project, index) => (
         <Link
           key={index}
-          href=""
-          className="relative max-w-160 overflow-hidden rounded-[20px] bg-card group cursor-pointer"
+          href={project.href}
+          className="relative max-w-160 overflow-hidden rounded-2xl md:rounded-[20px] bg-card group cursor-pointer"
         >
           <Image
             src={project.src}

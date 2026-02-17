@@ -7,24 +7,28 @@ const services = [
     title: "Content Creation",
     tags: "TV Ads | Digital Campaigns | Animation",
     desc: "From concept to post-production, we craft stories that captivate audiences and move markets.",
+    href: "",
   },
   {
     id: "02",
     title: "Media Management",
     tags: "Social Strategy | SEO | Paid Advertising",
     desc: "We amplify your brand's voice with data-driven campaigns that deliver measurable results.",
+    href: "",
   },
   {
     id: "03",
     title: "Brand Storytelling",
     tags: "Motion Graphics | Visual Identity",
     desc: "Distinctive creative that makes your brand impossible to ignore.",
+    href: "",
   },
   {
     id: "04",
     title: "App Development",
     tags: "iOS | Android | Web Apps",
     desc: "User-centric digital experiences engineered for engagement and growth.",
+    href: "",
   },
 ];
 
@@ -34,7 +38,7 @@ export const ServiceList = () => {
         {services.map((item) => (
           <Link
             key={item.id}
-            href=""
+            href={item.href}
             className="group flex flex-col md:flex-row items-start md:items-center text-foreground/40 py-10 border-b border-feint cursor-pointer"
           >
             <span className="md:w-1/8 text-sz-40 group-hover:text-foreground">

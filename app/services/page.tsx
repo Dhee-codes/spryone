@@ -1,4 +1,5 @@
 import { Heading } from "@/components/Heading";
+import { ServicesGrid } from "@/components/ServicesGrid";
 
 export default function Services() {
   return (
@@ -8,6 +9,7 @@ export default function Services() {
         main="Services We Offer"
         desc="Learn more about the services and the team behind it."
       />
+      <ServicesGrid />
     </section>
   )
 }

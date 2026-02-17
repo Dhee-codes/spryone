@@ -4,7 +4,7 @@ export const Hero = () => {
   return (
     <section className="min-h-screen mt-8 md:mt-14" >
       <div className="lg:grid lg:grid-cols-2 lg:gap-36">
-        <h1 className="text-sz-120 md:text-sz-150 leading-[1.1] md:leading-none font-grotesk uppercase max-md:ml-[4vw] md:max-lg:text-center">
+        <h1 className="text-sz-120 md:text-sz-150 leading-[1.1] md:leading-none font-grotesk uppercase max-lg:text-center">
           <span className="whitespace-nowrap"><span className="diaeresis">C</span>reative</span> Agency
         </h1>
         <div className="lg:flex lg:flex-col mb-12 md:mb-29.5">

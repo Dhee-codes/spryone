@@ -1,27 +1,5 @@
 import Image from "next/image";
 import { ServicesGrid } from "./ServicesGrid";
-import type { Service } from "./ServicesGrid";
-
-const services: Service[] = [
-  {
-    id: "01",
-    title: "Research and Strategy",
-    description: "We don't guess — we craft data-driven brilliance.",
-    detail: "Deep audience insights meet market trends to build unbeatable strategies.",
-  },
-  {
-    id: "02",
-    title: "Design & Innovation",
-    description: "Where aesthetics meet intelligence.",
-    detail: "Pixel-perfect concepts engineered to captivate and convert.",
-  },
-  {
-    id: "03",
-    title: "Deliver & Growth",
-    description: "Launch is just the beginning.",
-    detail: "Flawless execution followed by performance optimization.",
-  },
-];
 
 export const Feature = () => {
   return (
@@ -62,7 +40,7 @@ export const Feature = () => {
         </div>
       </div>
 
-      <ServicesGrid services={services} />
+      <ServicesGrid />
     </section>
   );
 };

@@ -1,24 +1,37 @@
 import { ArrowIcon } from "./ui/ArrowIcon";
 import Link from "next/link";
 
-export type Service = {
-  id: string
-  title: string
-  description: string
-  detail: string
-};
+const services = [
+  {
+    id: "01",
+    title: "Research and Strategy",
+    description: "We don't guess — we craft data-driven brilliance.",
+    detail: "Deep audience insights meet market trends to build unbeatable strategies.",
+    href: "",
+  },
+  {
+    id: "02",
+    title: "Design & Innovation",
+    description: "Where aesthetics meet intelligence.",
+    detail: "Pixel-perfect concepts engineered to captivate and convert.",
+    href: "",
+  },
+  {
+    id: "03",
+    title: "Deliver & Growth",
+    description: "Launch is just the beginning.",
+    detail: "Flawless execution followed by performance optimization.",
+    href: "",
+  },
+];
 
-type ServicesGridProps = {
-  services: Service[]
-};
-
-export function ServicesGrid({ services }: ServicesGridProps) {
+export function ServicesGrid() {
   return (
     <section className="grid grid-cols-1 place-items-center lg:grid-cols-3 gap-7.5 font-grotesk mb-16 md:mb-24 lg:mb-45">
         {services.map((service) => (
           <Link 
             key={service.id}
-            href=""
+            href={service.href}
             className="relative w-64 sm:w-76 lg:w-92 aspect-9/10 bg-card p-5 rounded-[20px] border border-feint drop-shadow hover:inset-ring-2 hover:ring-feint group cursor-pointer flex flex-col justify-end"
           >
             <span className="absolute top-5 left-5 text-feint text-sz-32 leading-none tracking-wide">

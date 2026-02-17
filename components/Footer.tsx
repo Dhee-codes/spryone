@@ -7,6 +7,17 @@ export const Footer = () => {
   const pathName = usePathname();
   const isHomePage = pathName === "/";
 
+  const linkClasses = (href: string) =>
+  `relative inline-block pb-1
+   after:absolute after:left-1 after:bottom-0
+   after:h-px after:w-[80%]
+   after:transition-transform after:origin-left
+   ${
+     pathName.startsWith(href)
+       ? "after:scale-x-100 after:bg-brand"
+       : "after:scale-x-0 after:bg-brand hover:after:scale-x-100"
+   }`;
+
   return (
     <>
       {!isHomePage && <Newsletter />}
@@ -17,19 +28,19 @@ export const Footer = () => {
         <nav className="md:col-start-2 col-span-2">
           <ul className="text-sz-16 mb-6 md:mb-0 space-y-2 md:space-y-0 md:flex md:justify-center md:gap-sz-60">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/" className={linkClasses("/")}>Home</Link>
             </li>
             <li>
-              <Link href="/services">Services</Link>
+              <Link href="/services" className={linkClasses("/services")}>Services</Link>
             </li>
             <li>
-              <Link href="/projects">Projects</Link>
+              <Link href="/projects" className={linkClasses("/projects")}>Projects</Link>
             </li>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link href="/about" className={linkClasses("/about")}>About Us</Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact" className={linkClasses("/contact")}>Contact</Link>
             </li>
           </ul>
         </nav>
